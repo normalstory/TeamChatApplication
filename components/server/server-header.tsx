@@ -5,6 +5,7 @@ import { MemberRole } from "@prisma/client";
 import { ChevronDown, UserPlus, Settings, Users, PlusCircle, Trash, LogOut } from "lucide-react"; //icons
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useModel } from "@/hooks/use-model-store";
 
 interface ServerHeaderProps{
     server: ServerWithMembersWithProfiles;
@@ -15,6 +16,8 @@ export const ServerHeader =({
     server,
     role 
 }:ServerHeaderProps) =>{
+    const {onOpen} = useModel();
+
     const isAdmin = role === MemberRole.ADMIN;
     const isModerator = isAdmin || role === MemberRole.MODERATOR;
 
@@ -28,7 +31,7 @@ export const ServerHeader =({
                     <ChevronDown className="h-5 w-5 ml-auto" />
                 </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 text-xs font-medium text-black dark:text-neutral-400 space-y-[2px]">
+            <DropdownMenuContent onClick={()=>onOpen("invite",{server})} className="w-56 text-xs font-medium text-black dark:text-neutral-400 space-y-[2px]">
                 {isModerator &&(
                     <DropdownMenuItem className="text-indigo-600 dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer">
                         Invite People ..
