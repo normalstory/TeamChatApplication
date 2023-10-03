@@ -3,11 +3,11 @@
 import { Plus } from "lucide-react"
 
 import { ActionTooltip } from "@/components/action-tooltip"
-import { useModel } from "@/hooks/use-model-store";
+import { useModal } from "@/hooks/use-modal-store";
 
 export const NavigationAction = () =>{
     //hook추가
-    const {onOpen } = useModel();
+    const {onOpen } = useModal();
 
     return (
         <div>

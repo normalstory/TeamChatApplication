@@ -11,16 +11,16 @@ import {
     DialogTitle,
   } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { useModel } from "@/hooks/use-model-store";  
+import { useModal } from "@/hooks/use-modal-store";  
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useOrigin } from "@/hooks/use-origin";
 
-export const InviteModel = () => {
-    const { onOpen, isOpen, onClose, type, data } = useModel();    
+export const InviteModal = () => {
+    const { onOpen, isOpen, onClose, type, data } = useModal();    
     const origin = useOrigin();
 
-    const isModelOpen = isOpen && type ==="invite";
+    const isModalOpen = isOpen && type ==="invite";
     const {server} = data;
 
     const [copied, setCopied] = useState(false);
@@ -51,7 +51,7 @@ export const InviteModel = () => {
     }
 
     return (
-       <Dialog open={isModelOpen} onOpenChange={onClose}>
+       <Dialog open={isModalOpen} onOpenChange={onClose}>
             <DialogContent className="bg-white text-black p-0 overflow-hidden">
                 <DialogHeader className="pt-8 px-6">
                     <DialogTitle className="text-2xl text-center font-bold">

@@ -3,8 +3,8 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
 import axios from "axios"
+import { useEffect } from "react";
 
 import {
     Dialog,
@@ -26,6 +26,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
 import { useRouter } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";  
 
 
   const formSchema = z.object({
@@ -37,15 +38,12 @@ import { useRouter } from "next/navigation";
     })
   });
 
-export const InitialModel = () => {
-    const [isMounted, setIsMounted] = useState(false);
-
+export const EditServermodal = () => {
+    const { isOpen, onClose, type, data } = useModal();    
     const router = useRouter();
 
-    useEffect(()=> {
-        setIsMounted(true);
-    },[]); 
-
+    const ismodalOpen = isOpen && type ==="editServer";
+    const {server} = data;
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -54,25 +52,35 @@ export const InitialModel = () => {
         }
     });
 
+    useEffect(()=>{
+        if(server){
+            form.setValue("name", server.name);
+            form.setValue("imageUrl", server.imageUrl);
+        }
+    },[server,form])
+
     const isLoading = form.formState.isSubmitting;
+
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            await axios.post("/api/servers", values);
+            await axios.patch(`/api/servers/${server?.id}`, values);
 
             form.reset();
             router.refresh();
-            window.location.reload();
+            onClose();
         } catch (error) {
             console.log(error);
         }
     }
 
-    if(!isMounted){
-        return null;
+    //hook 
+    const handleClose = () => {
+        form.reset();
+        onClose();
     }
 
     return (
-       <Dialog open>
+       <Dialog open={ismodalOpen} onOpenChange={handleClose}>
             <DialogContent className="bg-white text-black p-0 overflow-hidden">
                 <DialogHeader className="pt-8 px-6">
                     <DialogTitle className="text-2xl text-center font-bold">
@@ -123,7 +131,7 @@ export const InitialModel = () => {
                         </div>
                         <DialogFooter className="bg-gray-100 px-6 py-4">
                                 <Button variant="primary" disabled={isLoading}>
-                                    Create
+                                    Save
                                 </Button>
                         </DialogFooter>
                     </form>
