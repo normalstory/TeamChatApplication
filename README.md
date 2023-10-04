@@ -1,3 +1,22 @@
+
+#### Hands-on with coding a Discord clone webapp 
+Progress: 40 %  
+
+#### Documentation of development progress   
+I'm writing down the details to make it easier for non-developers to follow along. 
+https://www.notion.so/thinknormal/Discord-Clone-ing-1-3-0d4975f57d984d73a956b341e91c026c
+
+
+
+
+* * *
+
+
+
+* * *
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +53,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+* * *
+
+Lab Content Source: https://www.youtube.com/@codewithantonio (Set up subscriptions, likes, and notifications~ ;D)
