@@ -1,12 +1,17 @@
 
 #### Hands-on with coding a Discord clone webapp 
-Progress: 40 %  
+Progress: 61 %  
 
 #### Documentation of development progress   
 I'm writing down the details to make it easier for non-developers to follow along. 
 https://www.notion.so/thinknormal/Discord-Clone-ing-1-3-0d4975f57d984d73a956b341e91c026c
 
-
+#### How to use 
+1) Terminal : git clone https://github.com/normalstory/TeamChatApplication.git
+2) Terminal : cd TeamChatApplication
+3) Terminal : npm install
+4) Terminal : npm run dev
+5) URL : http://localhost:3000/  
 
 
 * * *
