@@ -1,6 +1,6 @@
 
 #### Hands-on with coding a Discord clone webapp 
-Progress: 61 %  
+Progress: 81 %  
 
 #### Documentation of development progress   
 I'm writing down the details to make it easier for non-developers to follow along. 
@@ -60,6 +60,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-* * *
+## Lab Contents 
 
-Lab Content Source: https://www.youtube.com/@codewithantonio (Set up subscriptions, likes, and notifications~ ;D)
+[codewithantonio](https://github.com/AntonioErdeljac/next13-discord-clone) Set up subscriptions, likes, and notifications~ ;D
