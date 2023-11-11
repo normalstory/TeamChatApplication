@@ -60,6 +60,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-* * *
+## Lab Contents 
 
-Lab Contents : codewithantonio( Set up subscriptions, likes, and notifications~ ;D)
+[codewithantonio](https://github.com/AntonioErdeljac/next13-discord-clone) Set up subscriptions, likes, and notifications~ ;D
