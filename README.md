@@ -1,6 +1,6 @@
 
 #### Hands-on with coding a Discord clone webapp 
-Progress: 61 %  
+Progress: 81 %  
 
 #### Documentation of development progress   
 I'm writing down the details to make it easier for non-developers to follow along. 
@@ -62,4 +62,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 * * *
 
-Lab Content Source: https://www.youtube.com/@codewithantonio (Set up subscriptions, likes, and notifications~ ;D)
+Lab Contents : codewithantonio( Set up subscriptions, likes, and notifications~ ;D)
