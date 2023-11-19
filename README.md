@@ -1,6 +1,6 @@
 
 #### Hands-on with coding a Discord clone webapp 
-Progress: 81 %  
+Progress: 100 %  
 
 #### Documentation of development progress   
 I'm writing down the details to make it easier for non-developers to follow along. 
@@ -15,8 +15,8 @@ https://www.notion.so/thinknormal/Discord-Clone-ing-1-3-0d4975f57d984d73a956b341
 
 
 * * *
-
-
+#### Key dependency packages
+shadcn, Next.js, clerk, Prisma, Planetscale, Uploading, Axios, Zustand, Tanstack, Livekit ..
 
 * * *
 
