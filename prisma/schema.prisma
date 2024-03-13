@@ -116,7 +116,7 @@ model Message {
   @@index([channelId])
   @@index([memberId])
 }
-
+ 
 model Conversation {
   id String @id @default(uuid())
 
